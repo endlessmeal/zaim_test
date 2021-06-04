@@ -14,10 +14,10 @@ API (FastAPI, sqlalchemy core, alembic)
 * **/docs**
 
 You may need to change files with your username and password for postgres:
-    alembic.ini
-    setting.py
-    env.py
-    docker-compose.yml
+* **alembic.ini**
+* **setting.py**
+* **env.py**
+* **docker-compose.yml**
 
 ### How to launch 
     docker-compose up --build
