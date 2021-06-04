@@ -19,6 +19,8 @@ You may need to change files with your username and password for postgres:
 * **env.py**
 * **docker-compose.yml**
 
+Create an empty folder - versions in alembic directory.
+
 ### How to launch 
     docker-compose up --build
     docker-compose run app alembic revision --autogenerate -m "Name of your migration"
