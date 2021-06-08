@@ -7,8 +7,8 @@ routes = APIRouter()
 
 @routes.post("/api/v1/loans")
 async def create_loan(loan: Loan):
-    await Products.create_loan(product_name=loan.product_name)
-    return {"status": "success"}
+    product = await Products.create_loan(product_name=loan.product_name)
+    return {"loan_id": product}
 
 
 @routes.get("/api/v1/loans/{product_uuid}")

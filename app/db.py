@@ -59,7 +59,7 @@ class Base:
 
     @classmethod
     def insert_query(cls, **values: Any) -> sa.sql.Insert:
-        return cls.__table__.insert().values(**values)
+        return cls.__table__.insert().values(**values).returning(cls.__table__.c.UUID)
 
 
 db_engine = DBEngine(str(db_url))
